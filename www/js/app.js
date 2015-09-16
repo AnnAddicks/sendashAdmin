@@ -77,7 +77,39 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'AccountCtrl'
       }
     }
-  });
+  })
+
+    .state('user-mgt', {
+      url: '/user',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/user-mgt.html',
+          controller: 'UserCtrl'
+        }
+      }
+    })
+
+    .state('client-mgt', {
+      url: '/client',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/client-mgt.html',
+          controller: 'ClientCtrl'
+        }
+      }
+    })
+
+    .state('endpoint-mgt', {
+      url: '/endpoint',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/endpoint-mgt.html',
+          controller: 'EndpointCtrl'
+        }
+      }
+    });
+
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
